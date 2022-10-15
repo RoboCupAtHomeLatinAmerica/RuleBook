@@ -1,0 +1,117 @@
+\section{Personal Recognition}
+\label{test:personal-recognition}
+
+\subsection*{Description}
+An Operator is introduced to the robot, which needs to learn what the Operator looks like. Once the robot has gathered enough information about the Operator, the Operator mixes within a crowd and the robot needs to find the Operator. Once the robot has found its Operator, it must explain how it must state information about the Operator.
+
+\noindent \textbf{Main goal:}
+The robot has to identify the Operator within a crowd and state information about the Operator and the crowd.
+
+\noindent \textbf{Optional goal:}
+Identify the operator by your name.
+
+\subsection*{Focus}
+This task focuses on
+\textit{people detection},
+\textit{people recognition},
+\textit{pose recognition} and
+\textit{Human-robot interaction}.
+
+\subsection*{Setup}
+\begin{itemize}[nosep]	
+	\item \textbf{Locations:} 
+	\begin{itemize}
+		\item This task takes place inside the \Arena{}.
+		\item The robot will starts at a designated starting position. 
+	\end{itemize}
+	\item \textbf{People:} 
+	\begin{itemize}
+		\item A "professional" operator is selected by the TC to test the robot. This person may a different in each run. 
+		\item The operator name will be chosen randomly from a list of common English names (see section \ref{sec:rules:scenario:names}).
+		\item There will be a minimum of three people in the crowd and a maximum of ten.
+		\item The operator will be facing forward and the other people will not be facing backwards.
+		\item The crowd will be located behind the robot at a distance between 2 and 3 meters apart.
+	\end{itemize}
+	\item \textbf{Furniture:} 
+	\begin{itemize}
+		\item All furniture are in their predefined locations.
+	\end{itemize}
+    \item \textbf{Objects:} 
+    \begin{itemize}
+		\item All objects are in their predefined locations.
+	\end{itemize}
+\end{itemize}
+
+\subsection*{Procedure}
+	\begin{enumerate}[nosep]
+		\item The referee requests the team to move the robot to the start location.
+		\item The referee gives the start signal and starts the timer.
+		\item The team leaves the area after the start signal.		
+		\item The referee follows the robot ready to press the emergency stop button.
+		
+		\item The team is allowed to instruct the operator until the referees start the time.
+		\item The robot waits for the "professional" operator at the starting position.
+		\item The robot has to memorize the operator. During this phase, the robot may instruct the operator to follow a certain setup procedure.
+		\item \textbf{Optionally}, the robot may ask the operator for his/her name.
+		Once the robot states it has finished memorizing the operator, it must wait for a Start Command.
+		\item The operator walks around and blends into the crowd
+		\item After the time elapses, the robot must turn about 180°, approach to the crowd and start looking for the operator.
+		\item \textit{Optionally}, once the crowd has been located, the robot must greet the operator (navigation or with the manipulator).
+% 		and state pose (sitting, standing, rising arms, etc.).
+		\item Finally, robot must tell the size of the crowd .i.e. how many people there is in the crowd.
+		
+
+	\end{enumerate}
+
+\subsection*{Additional rules and remarks}
+\begin{itemize}[nosep]
+	\item This test is not concerned with audio and voice recognition. Therefore, the start command may also be given by a single key press.
+	\item The robot needs to wait for at least 1 min before the operator appears in front of the robot. During this waiting time the team is not allowed to touch the robot.
+	\item If a person from the audience (severely) interferes with the robot in a way that makes it impossible to solve the task, the team may repeat the test immediately.
+	\item The robot interacts with the operator, not the team. That is, the team is not allowed to instruct the operator.
+    \item The robot needs to save an image log with boundbox.
+\end{itemize}
+
+\subsection*{Instructions:}
+\subsubsection*{To Referee}
+
+The referee needs to:
+\begin{itemize}
+	\item Check safe operation of the robot; the robot needs to be stopped immediately if a person is going to be touched by the robot.
+	\item Choose operator name randomly.
+\end{itemize}
+
+\subsubsection*{To OC}
+The OC needs to:
+\begin{itemize}
+    \item \textbf{2 hours before the test:} Select the "professional" operator.
+    \item \textbf{2 hours before the test:} Select the crowd.
+\end{itemize}
+
+\newpage
+\subsection*{Score sheet}
+
+\begin{table}[h]
+	\begin{tabular}{m{0.85\linewidth} c}
+		\textbf{Maximum time}: & 5 minutes \\
+	\end{tabular}
+\end{table}
+
+\begin{scorelist}
+
+	\scoreheading{Regular Rewards}	
+	
+	\scoreitem[1]{400}{Correctly Identify the operator (boundbox) .}
+	\scoreitem[1]{600}{Correctly State crowd's size (boundbox for each person).}
+
+	\scoreheading{Bonus Rewards}
+	\scoreitem[1]{60}{Approach or point at the operator (with navigation or manipulator).}
+	\scoreitem[1]{40}{Identify the operator by his name. (boundbox with his name)}
+
+	\scoreheading{Regular Penalties}
+	\penaltyitem[10]{1}{False positive will remove a true positive score.}
+
+
+\end{scorelist}
+
+\clearpage

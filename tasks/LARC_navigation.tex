@@ -1,0 +1,107 @@
+\section{Navigation and Follow Me}
+\label{test:navigation-and-follow-me}
+
+\subsection*{Description}
+The robot must navigate through a variety of waypoints and, at request, follow an operator from a safe distance avoiding hitting objects or any obstacles on the way. At the end of the test the robot must leave the arena.
+
+\noindent \textbf{Main goal:}
+The main objective in this test is to evaluate whether the robot is able to navigate on the scenario and follow a person.
+
+% \noindent \textbf{Optional goal:} No bonus reward
+
+
+\subsection*{Focus}
+This task focuses on \textit{mapping}, \textit{navigation}, \textit{path planning} and \textit{person tracking} and \textit{obstacle avoidance}.
+
+\subsection*{Setup}
+\begin{itemize}[nosep]	
+	\item \textbf{Locations:} 
+	\begin{itemize}
+		\item This task takes place inside and outside the \Arena{}.
+		\item The robot will start at front door.
+		\item The doors are open, except for the entry door.
+	\end{itemize}	 
+	\item \textbf{People:} 
+	\begin{itemize}
+		\item There will be a operator who the robot must follow.
+	\end{itemize}
+	\item \textbf{Furniture:} 
+	\begin{itemize}
+		\item All furniture are in their predefined locations.
+	\end{itemize}
+    \item \textbf{Objects:} 
+    \begin{itemize}
+		\item Avoidable objects may be placed on the way between rooms.
+	\end{itemize}
+\end{itemize}
+
+\subsection*{Procedure}
+	\begin{enumerate}[nosep]
+		\item The referee requests the team to move the robot to the start location.
+		\item The referee gives the start signal and starts the timer.
+		\item The team leaves the area after the start signal.		
+		\item The referee follows the robot ready to press the emergency stop button.
+		
+		\item \textbf{Entering the arena:} The robot starts outside the environment and must wait until the door opens.
+		\item \textbf{Waypoint 1 (door):} After entering the \Arena{}, the robot must navigate to Waypoint 1, which may be any location and is reachable via several paths, all doors are open.
+		\item \textbf{Waypoint 2 (obstructed path):} After reaching Waypoint 1, the robot must navigate and reach Waypoint 2. The possible paths between Waypoint 1 and 2 are obstructed by an avoidable obstacle, meaning there will be space for the robot to avoid the obstacle and follow its path. 
+		\item \textbf{Waypoint 3 (following a human)}: After reaching Waypoint 2, the robot must wait for an operator to show up for the follow me task. After the human arrives the robot must memorize and follow him. 
+		\begin{itemize}
+		    \item Memorizing the operator (training phase): The robot has to memorize the operator. During this phase, the robot may instruct the operator to follow a certain setup procedure and instruct the operator on what to do when the robot needs to stop following. 
+            \item Following the operator (guiding phase): When the robot signals that it is ready to start, the operator starts walking –in a natural way– through a designated path. The robot needs to follow the operator until the operator asks the robot to stop doing so (Waypoint 3).
+		\end{itemize}
+		\item \textbf{Waypoint 3 (going back):} Upon reaching Waypoint 3, the operator will command the robot to stop following him, using the instructions given by the robot in the training phase. Then, the robot must navigate back to Waypoint 2.
+		\item \textbf{Leaving the arena:} The robot must leave the arena through the indicated door. 
+	\end{enumerate}
+
+\subsection*{Addtional rules and remarks}
+\begin{itemize}[nosep]
+	\item The teams can inform the operator of how to go through the start and stop following procedures before the task starts;
+	\item The points for reaching a waypoint are only given if the robot had no collisions through its path. While following the robot may also keep a safe distance from the operator.
+\end{itemize}
+
+\subsection*{Instructions:}
+\subsubsection*{To Referee}
+
+% The referee needs to:
+% \begin{itemize}
+% 	\item ...
+% \end{itemize}
+
+\subsubsection*{To OC}
+The OC needs to:
+\begin{itemize}
+	\item \textbf{2 hours before the test:} Select and announce the robot start location.
+	\item \textbf{2 hours before the test:} Define each of the waypoints for each trial of each team.
+    \item \textbf{2 hours before the test:} Define each of the operator's paths for each trial of each team.
+\end{itemize}
+
+\newpage
+\subsection*{Score sheet}
+
+\begin{table}[h]
+	\begin{tabular}{m{0.85\linewidth} c}
+		\textbf{Maximum time}: & 5 minutes \\
+	\end{tabular}
+\end{table}
+
+\begin{scorelist}
+
+	\scoreheading{Regular Rewards}	
+	\scoreitem[1]{25}{Entering the arena}
+	\scoreitem[1]{150}{Reaching waypoint 1}
+	\scoreitem[1]{250}{Reaching waypoint 2}
+	\scoreitem[1]{400}{Following the operator}
+	\scoreitem[1]{150}{Reaching waypoint 3}
+	\scoreitem[1]{25}{Leaving the arena}
+
+% 	\scoreheading{Bonus Rewards}
+% 	\scoreitem[2]{0}{...} %no bonuses
+
+% 	\scoreheading{Regular Penalties}
+% 	\penaltyitem[2]{0}{...}
+
+\end{scorelist}
+
+\clearpage
+

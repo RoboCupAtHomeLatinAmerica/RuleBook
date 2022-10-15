@@ -1,0 +1,107 @@
+\section{Speech Recognition \& Audio Detection}
+\label{test:speech-recognition-audio-detection}
+
+\subsection*{Description}
+The test is divided in two phases. First the robot must answer a set of questions to an operator at the first attempt without asking for confirmation. The operator is not allowed to move to the robot or shout to the robot.
+
+\noindent \textbf{Main goal:}
+The robot must be able to recognize and answer to a specific set of questions without ask for confirmation.
+
+% \noindent \textbf{Optional goal:}
+% ...
+
+\subsection*{Focus}
+This task focuses on
+\textit{voice recognition}.
+
+\subsection*{Setup}
+\begin{itemize}[nosep]	
+	\item \textbf{Locations:} 
+	\begin{itemize}
+		\item This task takes place inside the \Arena{}.
+		\item The robot will start at a predefined location.
+		\item All doors of the apartment are open.
+	\end{itemize}	 
+	\item \textbf{People:} 
+	\begin{itemize}
+		\item A "professional" operator is selected by the TC to test the robot.
+	\end{itemize}
+	\item \textbf{Furniture:} 
+	\begin{itemize}
+		\item All furniture are in their predefined locations.
+	\end{itemize}
+    \item \textbf{Objects:} 
+    \begin{itemize}
+		\item All objects are in their predefined locations.
+	\end{itemize}
+\end{itemize}
+
+\subsection*{Procedure}
+	\begin{enumerate}[nosep]
+		\item The referee requests the team to move the robot to the start location.
+		\item The referee gives the start signal and starts the timer.
+		\item The team leaves the area after the start signal.		
+		\item The referee follows the robot ready to press the emergency stop button.
+		
+		\item A TC member will ask 5 questions from the set of 50 predefined questions in front of the robot.
+		\item The robot should answer the question without asking confirmation.
+		\item A question will only be asked once; there are no repetitions of a question.
+		\begin{itemize}
+		    \item The operator shall be standing still and facing to the robot.
+		    \item The operator shall be between 0.75 and 1.0 meters away from the robot position.
+    		\item The operator shall be between -60° and 60° from the robot’s center (front range).
+		\end{itemize}
+	\end{enumerate}
+
+\subsection*{Additional rules and remarks}
+\begin{itemize}[nosep]
+	\item \textbf{Continue rule:} Continue rule can not be used during this test.
+	\item \textbf{Question timeout:} If the robot does not answer within 10 seconds, the question is considered as missing, and the referee will proceed with the next question.
+	\item \textbf{Understanding the answer:} If the robot’s answer is not understood by the operator, it is considered as incorrect, and the referee will proceed with the next question. It is thus advised that the robot provide answers such that it is clear that the robot understood the question. For example, if the question is “What is the capital of Germany?”, instead of just answering “Berlin”, it is advised that the robot answers something to the effect of “The capital of Germany is Berlin”.
+% 	\item \textbf{Question repetition:} In the second phase, if the robot turns towards the operator to be asked once again, it should clearly state that it requires a repetition of the question once it finishes turning, so as to queue the operator to do so.
+	\item \textbf{Log:} It is mandatory to store the recognition logs for later verification.
+	\item Complex questions vary from each other only one word.
+	\item Questions will be provided in the warm up day.
+\end{itemize}
+
+\subsection*{Instructions:}
+\subsubsection*{To Referee}
+
+The referee needs to:
+\begin{itemize}
+	\item Avoid shouting to the robot.
+	\item Avoid getting closer to the robot.
+	\item Speak to the robot loud and clear with plain standard English.
+	\item Avoid repeating questions for the same robot. 
+\end{itemize}
+
+\subsubsection*{To OC}
+The OC needs to:
+\begin{itemize}
+	\item \textbf{2 hours before the test:} Select and announce the robot start location.
+	\item \textbf{2 hours before the test:} Draw the set of questiosn for each team
+\end{itemize}
+
+\newpage
+\subsection*{Score sheet}
+
+\begin{table}[h]
+	\begin{tabular}{m{0.85\linewidth} c}
+		\textbf{Maximum time}: & 5 minutes \\
+	\end{tabular}
+\end{table}
+
+\begin{scorelist}
+
+	\scoreheading{Regular Rewards}	
+	\scoreitem[5]{140}{Answer the question correctly}
+
+	\scoreheading{Bonus Rewards}
+	\scoreitem[5]{60}{Answer a complex question}
+
+% 	\scoreheading{Regular Penalties}
+% 	\penaltyitem[2]{0}{...}
+
+\end{scorelist}
+
+\clearpage

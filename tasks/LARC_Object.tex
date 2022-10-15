@@ -1,0 +1,119 @@
+\section{Manipulation and Object Recognition}
+\label{test:manipulation-and-object-recognition}
+
+\subsection*{Description}
+The robot must reach a bookcase in which there are 10 objects at different shelves. The robot must then identify and grasp 5 of those objects and put those into a new, easy-to-reach shelf that the team may choose.
+
+\noindent \textbf{Main goal:}
+The robot has to identify, grasp and correctly place several objects at different heights or positions.
+
+\noindent \textbf{Optional goal:}
+Finding a hidden or occluded object
+
+\subsection*{Focus}
+This task focuses on
+\textit{object detection},
+\textit{object recognition} and
+\textit{object manipulation}
+
+\subsection*{Setup}
+\begin{itemize}[nosep]	
+	\item \textbf{Locations:} 
+	\begin{itemize}
+		\item This task takes place inside the \Arena{}.
+		\item The robot will start at a random distance between 1.0m and 1.5m from the bookcase.
+	\end{itemize}	 
+	\item \textbf{People:} 
+	\begin{itemize}
+		\item There is no people in this task.
+	\end{itemize}
+	\item \textbf{Furniture:} 
+	\begin{itemize}
+		\item One of the bookcases in the apartment is used for this test.
+		\item The bookcase has at least 5 shelves between 0.30m and 1.80m from the ground.
+		\item One of the shelves is empty or will be made empty when the team chooses a shelf.
+	\end{itemize}
+    \item \textbf{Objects:} 
+    \begin{itemize}
+		\item All objects are in their predefined locations.
+	\end{itemize}
+\end{itemize}
+
+\subsection*{Procedure}
+	\begin{enumerate}[nosep]
+		\item The referee requests the team to move the robot to the start location.
+		\item The referee gives the start signal and starts the timer.
+		\item The team leaves the area after the start signal.		
+		\item The referee follows the robot ready to press the emergency stop button.
+		
+		\item The robot approaches the shelf from its nearby starting position and starts searching for objects.
+		\item \textbf{Optionally}, the robot can search for hidden or occluded objects.
+		\item Any object found by the robot may be grasped by it. 
+		\item Before or right after grasping the object, the robot has to announce which object it has found.
+		\item After grasping the object, the robot has to safely place it on the empty shelf of the bookcase.
+		\item Scores can only be gained a single time for each specific object.
+		
+	\end{enumerate}
+
+
+
+
+
+\subsection*{Additional rules and remarks}
+\begin{itemize}[nosep]
+	\item The objects are located as follows:
+	\begin{enumerate}[nosep]
+		\item 2 known object in an upper shelf.
+		\item 4 known object in a middle shelf. 
+		\item 2 known object in a lower shelf. 
+		\item 2 alike object in a middle shelf.
+	\end{enumerate}
+	\item May be more than one object in each shelf to fit all objects in.
+	\item Slightly touching the shelves or the bookcase is tolerated. Driving over the objects or any other form of a major collision is not allowed, and the referees directly stop the robot.
+	\item Robots must create a PDF report file including the list of recognized objects with a picture showing the object and the object name/label. This file may be stored on a USB-stick on the robot which is given to the OC after the test. The PDF file name should include the team name and a timestamp. It must be unmistakable which label belongs to which object. Objects must also be recognizable in the report by a human (OC) so that it can be scored. An overview of the shelf with bounding boxes and labels attached to the bounding boxes is handy for the TC to score. False positives in the report (labeling an object which is not an object but e.g. the edge of the shelf) are penalized.
+\end{itemize}
+
+\subsection*{Instructions:}
+\subsubsection*{To Referee}
+
+The referee needs to:
+\begin{itemize}
+	\item Place the objects in the bookcase
+	\item Make sure there is one empty shelf in the middle of the bookcase. 
+	\item Ask the team which shelf they want to be empty.
+\end{itemize}
+
+\subsubsection*{To OC}
+The OC needs to:
+\begin{itemize}
+	\item \textbf{2 hours before the test:} Select and announce the robot start location.
+\end{itemize}
+
+\newpage
+\subsection*{Score sheet}
+
+\begin{table}[h]
+	\begin{tabular}{m{0.85\linewidth} c}
+		\textbf{Maximum time}: & 5 minutes \\
+	\end{tabular}
+\end{table}
+
+\begin{scorelist}
+
+	\scoreheading{Regular Rewards}	
+	\scoreitem[5]{40}{Detection of object name.}
+	\scoreitem[5]{40}{Detection of object class.}
+	\scoreitem[5]{60}{Pick the object.}
+	\scoreitem[5]{60}{Place the object in the empty shelf.}
+	
+	\scoreheading{Bonus Rewards}
+	\scoreitem[1]{100}{Finding a hidden or occluded object.}
+
+	\scoreheading{Regular Penalties}
+	\penaltyitem[$\infty$]{20}{False positive for object name.}
+	\penaltyitem[$\infty$]{20}{False positive for object class.}
+	\penaltyitem[5]{30}{Drop the object.}
+
+\end{scorelist}
+
+\clearpage
