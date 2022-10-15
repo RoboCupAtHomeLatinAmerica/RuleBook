@@ -1,8 +1,6 @@
 RuleBook for RoboCup @Home Brazil 2022 
 ===============================
 
-[Current PDF (master)](https://robocupathome.github.io/RuleBook/rulebook/master.pdf)
-
 RoboCup@Home teams and team members are welcome to post GitHub issues for clarifications, questions etc.
 
 Improvements are also welcome in the form of pull requests.
