@@ -22,14 +22,14 @@ The robot helps the operator to carry some luggage to a car which is parked outs
 % \end{enumerate}
 
 \subsection*{Focus}
-\emph{Person following}, \emph{navigation in unmapped environments}, \emph{social navigation}.
+\emph{Person following}, \emph{mapping}, \emph{social navigation}, \emph{obstacle avoidance}, \emph{path planning}.
 
 \subsection*{Setup}
 \begin{itemize}[nosep]
 	\item \textbf{Locations}: 
 		\begin{itemize}
 		 \item The test takes place both inside and outside the \Arena{}.
-		 \item The robot starts at a predefined location in the living room.
+		 \item The robot starts in the center of the living room.
 		\end{itemize}
 	\item \textbf{People}: The operator is standing in front of the robot and is pointing at the bag to be carried outside.
 	\item \textbf{Objects}: At least two bags are placed near the operator (within a 2m distance and visible to the robot).
@@ -38,13 +38,13 @@ The robot helps the operator to carry some luggage to a car which is parked outs
 \subsection*{Procedure}
 \begin{enumerate}[nosep]
 	\item \textbf{Picking up the bag:} The robot picks up the bag pointed at by the operator, or asks them to handle it to the robot.
-	\item \textbf{Following the operator:} The robot should inform the operator when it is ready to follow them. The operator walks naturally towards the car; after reaching the car, the operator takes the bag back and thanks the robot.
+	\item \textbf{Following the operator:} The robot should inform the operator when it is ready to follow them. The operator walks slowly towards the car; after reaching the car, the operator takes the bag back and thanks the robot.
 	\item \textbf{Obstacles:} The robot will face 2 obstacles along its way (in arbitrary order):
 	\begin{enumerate*}[label=(\alph*)]
-	    \item an object on the ground,
+	    \item a random object on the ground,
 % 		\item a small object on the ground,
 % 		\item a hard-to-see object,
-		\item a crowd of people obstructing the path outside.
+		\item a crowd of 3 to 4 people obstructing the path outside.
 % 		\item a small area blocked using retractable barriers.
 	\end{enumerate*}
 	
@@ -69,11 +69,11 @@ The robot helps the operator to carry some luggage to a car which is parked outs
     
     \item \textbf{Dropping the bags:} Dropping a bag causes a penalty. The robot can pick it up again or ask for the operator to pick it up for him.
     
-    % \item \textbf{Not picking up a bag:} Unability to pick up a dropped bag results in a task failed and 0 points total earned.
+    \item \textbf{Not picking up correct bag:} Unability to pick up a dropped bag results in a task failed and 0 points total earned.
 
-	\item \textbf{Car location:} There is no real car outside; instead, a fixed location outside the \Arena{} is designated as a car location.
+	\item \textbf{Car location:} There is no real car outside; instead, a unknown location outside the \Arena{} is designated as a car location.
 
-	\item \textbf{Reaching the car:} The robot can reach the car location only by following the operator (the location is unknown before the test).
+	\item \textbf{Reaching the car:} The robot can reach the car location only by following the operator (the car location is unknown).
 
 	\item \textbf{Deus ex Machina:} Score reductions for human assistance are applied in case the robot loses the operator, and needs to perform some action to find them again. %through:
     % \begin{enumerate}
