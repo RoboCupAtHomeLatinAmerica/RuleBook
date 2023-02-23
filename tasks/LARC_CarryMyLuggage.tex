@@ -10,6 +10,7 @@
 %% passes through the door
 %% avoids people
 %% reenters arena
+
 The robot helps the operator to carry some luggage to a car which is parked outside.
 
 \noindent \textbf{Main Goal:} The robot helps the operator to carry a bag to a car parked outside.\\
@@ -22,7 +23,7 @@ The robot helps the operator to carry some luggage to a car which is parked outs
 % \end{enumerate}
 
 \subsection*{Focus}
-\emph{Person following}, \emph{navigation in unmapped environments}, \emph{social navigation}.
+This task focuses on \textit{person tracking}, \emph{navigation in unmapped environments}, \emph{social navigation} and \textit{obstacle avoidance}.
 
 \subsection*{Setup}
 \begin{itemize}[nosep]
@@ -37,7 +38,7 @@ The robot helps the operator to carry some luggage to a car which is parked outs
 
 \subsection*{Procedure}
 \begin{enumerate}[nosep]
-	\item \textbf{Picking up the bag:} The robot picks up the bag pointed at by the operator, or asks them to handle it to the robot.
+	\item \textbf{Picking up the bag:} The robot picks up the bag pointed at by the operator, or asks them to handle it to the robot. If the robot picks up the wrong bag and delivers it, it won't score at any stage.
 	\item \textbf{Following the operator:} The robot should inform the operator when it is ready to follow them. The operator walks naturally towards the car; after reaching the car, the operator takes the bag back and thanks the robot.
 	\item \textbf{Obstacles:} The robot will face 2 obstacles along its way (in arbitrary order):
 	\begin{enumerate*}[label=(\alph*)]
