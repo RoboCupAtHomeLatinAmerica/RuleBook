@@ -10,6 +10,7 @@
 %% passes through the door
 %% avoids people
 %% reenters arena
+
 The robot helps the operator to carry some luggage to a car which is parked outside.
 
 \noindent \textbf{Main Goal:} The robot helps the operator to carry a bag to a car parked outside.\\
@@ -22,29 +23,30 @@ The robot helps the operator to carry some luggage to a car which is parked outs
 % \end{enumerate}
 
 \subsection*{Focus}
-\emph{Person following}, \emph{mapping}, \emph{social navigation}, \emph{obstacle avoidance}, \emph{path planning}.
+This task focuses on \textit{person tracking}, \emph{navigation in unmapped environments}, \emph{social navigation} and \textit{obstacle avoidance}.
 
 \subsection*{Setup}
 \begin{itemize}[nosep]
 	\item \textbf{Locations}: 
 		\begin{itemize}
 		 \item The test takes place both inside and outside the \Arena{}.
-		 \item The robot starts in the center of the living room.
+		 \item The robot starts at the living room's center.
 		\end{itemize}
 	\item \textbf{People}: The operator is standing in front of the robot and is pointing at the bag to be carried outside.
 	\item \textbf{Objects}: At least two bags are placed near the operator (within a 2m distance and visible to the robot).
+	\item \textbf{Obstacle}: There will be a random object on the ground, in the robot's path. The object will be the same for all teams.
 \end{itemize}
 
 \subsection*{Procedure}
 \begin{enumerate}[nosep]
-	\item \textbf{Picking up the bag:} The robot picks up the bag pointed at by the operator, or asks them to handle it to the robot.
-	\item \textbf{Following the operator:} The robot should inform the operator when it is ready to follow them. The operator walks slowly towards the car; after reaching the car, the operator takes the bag back and thanks the robot.
+	\item \textbf{Picking up the bag:} The robot picks up the bag pointed at by the operator, or asks them to handle it to the robot. If the robot picks up the wrong bag and delivers it, it won't score at any stage.
+	\item \textbf{Following the operator:} The robot should inform the operator when it is ready to follow them. The operator walks naturally towards the car; after reaching the car, the operator takes the bag back and thanks the robot.
 	\item \textbf{Obstacles:} The robot will face 2 obstacles along its way (in arbitrary order):
 	\begin{enumerate*}[label=(\alph*)]
-	    \item a random object on the ground,
+	    \item an object on the ground,
 % 		\item a small object on the ground,
 % 		\item a hard-to-see object,
-		\item a crowd of 3 to 4 people obstructing the path outside.
+		\item a crowd of people obstructing the path outside.
 % 		\item a small area blocked using retractable barriers.
 	\end{enumerate*}
 	
@@ -65,16 +67,12 @@ The robot helps the operator to carry some luggage to a car which is parked outs
 \subsection*{Additional Rules and Remarks}
 \begin{enumerate}[nosep]
 
+	\item \textbf{Picking up the bag:} The robot must pick up the bag using gesture detection resources.
+    \item \textbf{Not picking up the correct bag:} This results in task failed and 0 points total earned.
     \item \textbf{Finding the operator:} The robot can ask for the operator to go through a calibration procedure. This can be done anytime during the path. However with penalties being applied in this case.
-    
     \item \textbf{Dropping the bags:} Dropping a bag causes a penalty. The robot can pick it up again or ask for the operator to pick it up for him.
-    
-    \item \textbf{Not picking up correct bag:} Unability to pick up a dropped bag results in a task failed and 0 points total earned.
-
-	\item \textbf{Car location:} There is no real car outside; instead, a unknown location outside the \Arena{} is designated as a car location.
-
-	\item \textbf{Reaching the car:} The robot can reach the car location only by following the operator (the car location is unknown).
-
+	\item \textbf{Car location:} There is no real car outside; instead, a fixed location outside the \Arena{} is designated as a car location.
+	\item \textbf{Reaching the car:} The robot can reach the car location only by following the operator (the location is unknown before the test).
 	\item \textbf{Deus ex Machina:} Score reductions for human assistance are applied in case the robot loses the operator, and needs to perform some action to find them again. %through:
     % \begin{enumerate}
     %  \item Natural interaction (e.g., waving and calling)
@@ -114,6 +112,7 @@ The referees need to:
 2h before test:
 \begin{itemize}[nosep]
 	\item Select and announce the robot's starting point.
+	\item Draw the object to obstruct the robot's path.
 	\item Select which bags will be used in the test.
 \end{itemize}
 
@@ -126,9 +125,9 @@ The maximum time for this test is 5 minutes.
 % 	\scoreitem{100}{Picking up the correct bag}
     \scoreitem[2]{350}{Picking up each of the bags without human assistance}
 	\scoreitem{600}{Following the person to the car}
+    \scoreitem{200}{Avoiding the object on the ground}
     \scoreitem{300}{Avoiding the crowd of people obstructing the path}
 % 	\scoreitem{50}{Avoiding the small object on the ground}
-    \scoreitem{200}{Avoiding the object on the ground}
     \scoreitem{100}{Leaving the arena}
     \scoreitem{100}{Re-entering the arena}
 % 	\scoreitem{50}{Avoiding the hard-to-see object}

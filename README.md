@@ -1,4 +1,4 @@
-RuleBook for RoboCup @Home Brazil 2022 
+RuleBook for RoboCup @Home Brazil 2023
 ===============================
 
 RoboCup@Home teams and team members are welcome to post GitHub issues for clarifications, questions etc.
@@ -23,3 +23,11 @@ Contributions and improvements to the rulebook are always welcome in the form of
 
 The content of this project itself is licensed under the Creative Commons Attribution Share Alike 4.0 International license, and the underlying source code used to format and display that content is licensed under the GPL v2 license.
 
+### Issues
+
+Feel free to suggest any corrections or updates to the rulebook by creating new issues. This helps us to discuss with the community about the present and future of the league.
+In doing so, please try to make clear the following information whenever possible:
+
+- In which section of the rulebook should your suggestion/correction apply?
+- What does the rule currently say about this topic?
+- How will the rule look after the update?

@@ -29,6 +29,10 @@ This task focuses on \textit{mapping}, \textit{navigation}, \textit{path plannin
 	\begin{itemize}
 		\item All furniture are in their predefined locations.
 	\end{itemize}
+	\item \textbf{Obstacles:} 
+	\begin{itemize}
+		\item There will be obstacles wich the robot must to avoid.
+	\end{itemize}
     \item \textbf{Objects:} 
     \begin{itemize}
 		\item Avoidable objects will be placed on the way between rooms, the object has a minimum height of 10cm.
@@ -57,7 +61,8 @@ This task focuses on \textit{mapping}, \textit{navigation}, \textit{path plannin
 \subsection*{Addtional rules and remarks}
 \begin{itemize}[nosep]
 	\item The teams can inform the operator of how to go through the start and stop following procedures before the task starts;
-	\item The points for reaching a waypoint are only given if the robot had no collisions through its path. While following the robot may also keep a safe distance from the operator.
+	\item The points for reaching a waypoint are only given if the robot had no collisions through its path. While following the robot may also keep a safe distance from the operator;
+	\item If the selected waypoint 3 has two or more entries, the operator must follow the largest path.
 \end{itemize}
 
 \subsection*{Instructions:}
@@ -73,7 +78,11 @@ The OC needs to:
 \begin{itemize}
 	\item \textbf{2 hours before the test:} Select and announce the robot start location.
 	\item \textbf{2 hours before the test:} Define each of the waypoints for each trial of each team.
+<<<<<<< HEAD
     \item \textbf{2 hours before the test:} Define each of the operator's paths for each trial of each round.
+=======
+    \item \textbf{2 hours before the test:} Draw the waypoint 3 each round.
+>>>>>>> 97349ad27671741becead1396a8ce95632987cbc
 \end{itemize}
 
 \newpage
@@ -98,10 +107,9 @@ The OC needs to:
 % 	\scoreheading{Bonus Rewards}
 % 	\scoreitem[2]{0}{...} %no bonuses
 
-% 	\scoreheading{Regular Penalties}
-% 	\penaltyitem[2]{0}{...}
+ 	\scoreheading{Regular Penalties}
+ 	\penaltyitem{50}{Collision}
 
 \end{scorelist}
 
 \clearpage
-

@@ -61,16 +61,17 @@ This task focuses on
 
 \subsection*{Additional rules and remarks}
 \begin{itemize}[nosep]
-	\item The objects are located as follows:
-	\begin{enumerate}[nosep]
-		\item 2 known object in an upper shelf.
-		\item 4 known object in a middle shelf. 
-		\item 2 known object in a lower shelf. 
-		\item 2 alike object in a middle shelf.
-	\end{enumerate}
+	% \item The objects are located as follows:
+	% \begin{enumerate}[nosep]
+	% 	\item 2 known object in an upper shelf.
+	% 	\item 4 known object in a middle shelf. 
+	% 	\item 2 known object in a lower shelf. 
+	% 	\item 2 alike object in a middle shelf.
+	% \end{enumerate}
 	\item May be more than one object in each shelf to fit all objects in.
 	\item Slightly touching the shelves or the bookcase is tolerated. Driving over the objects or any other form of a major collision is not allowed, and the referees directly stop the robot.
 	\item Robots must create a PDF report file including the list of recognized objects with a picture showing the object and the object name/label. This file may be stored on a USB-stick on the robot which is given to the OC after the test. The PDF file name should include the team name and a timestamp. It must be unmistakable which label belongs to which object. Objects must also be recognizable in the report by a human (OC) so that it can be scored. An overview of the shelf with bounding boxes and labels attached to the bounding boxes is handy for the TC to score. False positives in the report (labeling an object which is not an object but e.g. the edge of the shelf) are penalized.
+	\item A post-it with constrasting colors can be glued to the front of the object to create occlusion.
 \end{itemize}
 
 \subsection*{Instructions:}
@@ -103,16 +104,16 @@ The OC needs to:
 	\scoreheading{Regular Rewards}	
 	\scoreitem[5]{40}{Detection of object name.}
 	\scoreitem[5]{40}{Detection of object class.}
-	\scoreitem[5]{60}{Pick the object.}
-	\scoreitem[5]{60}{Place the object in the empty shelf.}
+	\scoreitem[5]{100}{Pick the object.}
+	\scoreitem[5]{120}{Place the object in the empty shelf.}
 	
 	\scoreheading{Bonus Rewards}
 	\scoreitem[1]{100}{Finding a hidden or occluded object.}
 
 	\scoreheading{Regular Penalties}
-	\penaltyitem[$\infty$]{20}{False positive for object name.}
-	\penaltyitem[$\infty$]{20}{False positive for object class.}
-	\penaltyitem[5]{30}{Drop the object.}
+	\penaltyitem[$\infty$]{40}{False positive for object name.}
+	\penaltyitem[$\infty$]{40}{False positive for object class.}
+	\penaltyitem[5]{50}{Drop the object.}
 
 \end{scorelist}
 
