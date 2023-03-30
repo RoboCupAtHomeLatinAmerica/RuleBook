@@ -7,6 +7,8 @@ Improvements are also welcome in the form of pull requests.
 
 This rulebook is based on the rulebook used in the robocup@home world championship in this [link](https://github.com/RoboCupAtHome/RuleBook).
 
+The current version of RuleBook can be found [here](build/Rulebook.pdf).
+
 ### RoboCup
 RoboCup
 is an international joint project to promote AI, robotics, and related fields.  It is an attempt to foster AI and intelligent robotics research by providing standard problems where a wide range of technologies can be integrated and examined.  More information can be found at [http://www.robocup.org/](http://www.robocup.org/).
