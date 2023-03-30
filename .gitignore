@@ -1,3 +1,5 @@
-build*
+build/*
+!build/*.pdf
 .temp_rulebook_date
 .temp_rulebook_version
+
