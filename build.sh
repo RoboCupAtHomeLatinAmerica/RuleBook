@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # install texlive before run this script
-# sudo apt-get install texlive*
+# sudo apt-get update
+# sudo apt-get install -y texlive*
 
 file="${1:-Rulebook}"
 
