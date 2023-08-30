@@ -69,7 +69,7 @@ This task focuses on \textit{person tracking}, \emph{navigation in unmapped envi
 
 	\item \textbf{Picking up the bag:} The robot must pick up the bag using gesture detection resources.
     \item \textbf{Not picking up the correct bag:} This results in task failed and 0 points total earned.
-    \item \textbf{Finding the operator:} The robot can ask for the operator to go through a calibration procedure. This can be done anytime during the path. However with penalties being applied in this case.
+    \item \textbf{Finding the operator:} The robot can ask for the operator to go through a calibration procedure. The operator will stop walking if the robot starts giving instructions. This can be done at any time along the way and means a penalty. After 30 seconds a new penalty may be applied if the robot continues to give instructions. The robot cannot give instructions that make the operator leave the place he stopped. The operator will only return to follow the path when the robot reports that it has found the operator.
     \item \textbf{Dropping the bags:} Dropping a bag causes a penalty. The robot can pick it up again or ask for the operator to pick it up for him.
 	\item \textbf{Car location:} There is no real car outside; instead, a fixed location outside the \Arena{} is designated as a car location.
 	\item \textbf{Reaching the car:} The robot can reach the car location only by following the operator (the location is unknown before the test).
