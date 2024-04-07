@@ -91,9 +91,9 @@ The OC needs to:
 \begin{scorelist}
 
 	\scoreheading{Regular Rewards}	
-	\scoreitem[5]{40}{Detection of object name.}
-	\scoreitem[5]{40}{Detection of object class.}
-	\scoreitem[5]{100}{Pick the object.}
+	\scoreitem[10]{20}{Detection of object name.}
+	\scoreitem[10]{20}{Detection of object class.}
+	\scoreitem[5]{100}{Pick the object (The object cannot be touching the shelf and remain in the robot's possession for at least one second).}
 	\scoreitem[5]{120}{Place the object in the delivery location.}
 	
 	\scoreheading{Bonus Rewards}
@@ -102,7 +102,7 @@ The OC needs to:
 	\scoreheading{Regular Penalties}
 	\penaltyitem[$\infty$]{40}{False positive for object name.}
 	\penaltyitem[$\infty$]{40}{False positive for object class.}
-	\penaltyitem[5]{50}{Drop the object.}
+	\penaltyitem[5]{50}{Drop the object. (Only applied if the robot picked up the object)}
 
 \end{scorelist}
 

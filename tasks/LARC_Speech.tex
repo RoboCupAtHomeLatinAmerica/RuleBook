@@ -2,7 +2,10 @@
 \label{test:speech-recognition-audio-detection}
 
 \subsection*{Description}
-The robot must answer a set of questions to an operator at the first attempt without asking for confirmation. The operator is not allowed to move to the robot or shout to the robot. The operator is not allowed to move to the robot or shout to the robot. The questions will be related to the context of the Robocup@Home competition.
+The robot must answer a set of questions to an operator at the first attempt without asking for confirmation. 
+The operator is not allowed to move to the robot or shout to the robot. 
+The questions will be related to the context of two diferent topics.
+Both contexts will be informed during the warm up.
 
 \noindent \textbf{Main goal:}
 The robot must be able to recognize and answer to a set of questions without ask for confirmation.
@@ -43,17 +46,17 @@ This task focuses on
 		\item The referee gives the start signal and starts the timer.
 		\item The team leaves the area after the start signal.		
 		
-		\item The operator will ask 5 questions related to the context of the Robocup@Home competition in front of the robot.
-		\begin{itemize}
-		    \item 2 predefined questions.
-		    \item 4 open questions.
-		\end{itemize}
+		\item The operator will ask 6 questions related to the selcted contexts in front of the robot.
+		% \begin{itemize}
+		%     \item 2 predefined questions.
+		%     \item 4 open questions.
+		% \end{itemize}
 		\item The robot should answer the question without asking confirmation.
 		\item A question will only be asked once; there are no repetitions of a question.
 		\begin{itemize}
 		    \item The operator shall be standing still and facing to the robot.
 		    \item The operator shall be between 0.75 and 1.0 meters away from the robot position.
-    		\item The operator shall be between -60° and 60° from the robot’s center (front range).
+    		\item The operator shall be between -60° and 60° from the robot's center (front range).
 		\end{itemize}
 	\end{enumerate}
 
@@ -61,10 +64,10 @@ This task focuses on
 \begin{itemize}[nosep]
 	\item \textbf{Continue rule:} Continue rule can not be used during this test.
 	\item \textbf{Question timeout:} If the robot does not answer within 10 seconds, the question is considered as missing, and the referee will proceed with the next question.
-	\item \textbf{Understanding the answer:} If the robot’s answer is not understood by the operator, it is considered as incorrect, and the referee will proceed with the next question. It is thus advised that the robot provide answers such that it is clear that the robot understood the question. For example, if the question is “What is the capital of Germany?”, instead of just answering “Berlin”, it is advised that the robot answers something to the effect of “The capital of Germany is Berlin”.
+	\item \textbf{Understanding the answer:} If the robot's answer is not understood by the operator, it is considered as incorrect, and the referee will proceed with the next question. It is thus advised that the robot provide answers such that it is clear that the robot understood the question. For example, if the question is “What is the capital of Germany?”, instead of just answering “Berlin”, it is advised that the robot answers something to the effect of “The capital of Germany is Berlin”.
 % 	\item \textbf{Question repetition:} In the second phase, if the robot turns towards the operator to be asked once again, it should clearly state that it requires a repetition of the question once it finishes turning, so as to queue the operator to do so.
 	\item \textbf{Log:} It is mandatory to store the recognition logs for later verification.
-	\item Predefined questions will be provided in the warm up day.
+	% \item Predefined questions will be provided in the warm up day.
 \end{itemize}
 
 \subsection*{Instructions:}
@@ -99,8 +102,8 @@ The OC needs to:
 \begin{scorelist}
 
 	\scoreheading{Regular Rewards}	
-	\scoreitem[2]{50}{Answer the predefined question correctly}
-	\scoreitem[4]{100}{Answer the open question correctly}
+	% \scoreitem[2]{50}{Answer the predefined question correctly}
+	\scoreitem[6]{100}{Answer the question correctly}
 
 % 	\scoreheading{Regular Penalties}
 % 	\penaltyitem[2]{0}{...}
