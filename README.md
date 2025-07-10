@@ -1,4 +1,4 @@
-RuleBook for RoboCup @Home Brazil Open 2024
+RuleBook for RoboCup @Home Brazil Open 2025
 ===============================
 
 RoboCup@Home teams and team members are welcome to post GitHub issues for clarifications, questions etc.
