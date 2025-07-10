@@ -6,7 +6,7 @@
 The robot retrieves and serves orders to several customers in a real restaurant previously unknown to the robot.
 
 \textbf{Main goal:}
-	Detect calling or waving customer, reach a customer's table without prior guidance/training. Take and serve all orders.
+	Detect calling or waving customer, reach a customer’s table without prior guidance/training. Take and serve all orders.
 	
 \textbf{Optional goal:}
 	Use an unattached tray to transport the order.
@@ -70,15 +70,20 @@ This task focuses on
 		\item The robot may use up to one minute to instruct the \textit{Professional Barman}.
 		\item The robot can request to be guided to a customer's table.
 		\item The robot can choose to take several orders and place them later on, place an order and pick the next one while the former is being served, or dispatch one order at a time.
+		\item The robot should politely confirm the order to the client when receiving it, keeping the guest pleased.
 		\item The robot can either transport each object individually, or using a tray. All delivered objects must be placed on the customer's table.
-		\item By default, the barman will place the order in a basket or tray for the robot to deliver it.
-		\item Upon arrival to the restaurant, only the team leader is allowed next to the robot for watching and charging.
+		\item For transport with an unattached tray, the robot must pick up the objects and place them on a tray, pick up the tray, and then place the objects from the tray on the table (first placing the tray on the table is allowed).
+		\item If requested, the barman will place the order in a basket or tray for the robot to deliver it.
+		\item Upon arrival to the restaurant, only two team members are allowed next to the robot for watching and charging.
 		\item If a person from the audience (severely) interferes with the robot in a way that makes it impossible to solve the task, the teams may repeat the test immediately.
+		\item Each Deus Ex Machina penalty for skipping manipulation will only be applied twice per order so receiving an order with three objects is not more punishing.
+		\item If the robot detects a customer but does not reach their table, the robot must clearly show who was detected to receive points, i.e. displaying a picture of the person.
+		\item When a team is at the front of the queue, they are allowed to begin their startup procedure (the robot must remain in place). When it is their turn, they must bring the robot directly and in a straight line from the front of the queue to the start location. Once at the start location only slight movements are allowed (no moving back and forth, no full rotations etc.)
 	\end{itemize}
 	\item \textbf{Disqualification:}
 	\begin{itemize}
 		\item Touching the robot after the start signal.
-		\item Tweaking, coding, debugging, or mapping the area in place.
+		\item Mapping the area in advance.
 	\end{itemize}
 \end{itemize}
 
@@ -106,23 +111,29 @@ The OC needs to:
 	\end{tabular}
 \end{table}
 
-\small\begin{scorelist}
+\small\begin{scorelist}[timelimit=15]
 	\scoreheading{Regular Rewards}	
-	\scoreitem[2]{200}{Detect calling or waving customer (per order).}
-	\scoreitem[2]{200}{Reach a customer's table without prior guidance/training (per order).}
-	\scoreitem[2]{600}{Take and serve an order.}
+	\scoreitem[2]{100}{Detect calling or waving customer}
+	\scoreitem[2]{100}{Reach a customer's table without prior guidance/training}
+
+	\scoreitem[2]{200}{Understand and confirm the order received to the customer}
+	\scoreitem[2]{100}{Communicate the order to the barman}
+
+	\scoreitem[2]{100}{Return to the customer table with the order}
+	\scoreitem[2]{200}{Serve the order to the customer}
 
 	\scoreheading{Bonus Rewards}
-	\scoreitem[2]{100}{Use an unattached tray to transport (per order).}
+	\scoreitem[2]{200}{Use an unattached tray to transport}
 	
 	\scoreheading{Regular Penalties}
-	\penaltyitem[2]{100}{Not making eye-contact when taking an order (per order).}
+	\penaltyitem[2]{200}{Being guided to a table}
+	\penaltyitem[2]{80}{Not making eye-contact when taking an order}
+	\penaltyitem[2]{80}{Not reaching the bar (barman has to move from behind the bar to interact with the robot)}
 
 	\scoreheading{Deus ex Machina Penalties}
-	\penaltyitem[2]{200}{Being guided to a table (per order).}
-	\penaltyitem[6]{100}{Bypassing manipulation (per object).}
-	\penaltyitem[6]{50}{Each object handover (per object).}
-	\penaltyitem[2]{25}{Being told/pointed where is a table/\textit{Kitchen-bar} (per order).}
+	\penaltyitem[4]{50}{Asking the Barman to handover object to the robot}
+	\penaltyitem[4]{50}{Guest needing to take the object from a tray or the robot's hand}
+	\penaltyitem[2]{100}{Being told/pointed where is a table/\textit{Kitchen-bar}}
 
 \end{scorelist}
 \clearpage
