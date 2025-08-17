@@ -1,65 +1,62 @@
 \section{Carry My Luggage}
 \label{test:carry-my-luggage}
 
-%% robot in the living room
-%% operator asks to help with luggage (pointing or saying)
-%% the robot picks up the bags or asks to give it to them
-%% robot informs when is ready to follow
-%% robot starts following
-%% avoids object
-%% passes through the door
-%% avoids people
-%% reenters arena
+The robot's owner needs help carrying a bag from the car to the starting location.
 
-The robot helps the operator to carry some luggage to a car which is parked outside.
+\noindent \textbf{Main Goal:} The robot assists the operator in retrieving a bag from a designated car location outside and returning to the starting point.\\
 
-\noindent \textbf{Main Goal:} The robot helps the operator to carry a bag to a car parked outside.\\
-
-% This part is related to a bonus
-% \noindent \textbf{Optional Goals:}
-% \begin{enumerate}[nosep]
-% 	\item Re-entering the arena
-% 	\item Following the queue on the way back to the arena
-% \end{enumerate}
+\noindent \textbf{Optional Goals:}
+\begin{enumerate}[nosep]
+	\item Return to the starting location autonomously
+	\item Follow the queue of people returning to the arena in appropriate manner.
+\end{enumerate}
 
 \subsection*{Focus}
-This task focuses on \textit{person tracking}, \emph{navigation in unmapped environments}, \emph{social navigation} and \textit{obstacle avoidance}.
+\emph{Person following}, \emph{navigation in unmapped environments}, \emph{social navigation}.
 
 \subsection*{Setup}
 \begin{itemize}[nosep]
 	\item \textbf{Locations}: 
 		\begin{itemize}
-		 \item The test can take place both inside and/or outside the \Arena{}.
-		 \item The robot starts at the living room's center.
+		 \item The test is performed outside the arena in a public space.
+		 \item The robot starts at a predefined location, announced before the test.
 		\end{itemize}
-	\item \textbf{People}: The operator is standing in front of the robot and is pointing at the bag to be carried outside.
-	\item \textbf{Objects}: At least two bags are placed near the operator (within a 2m distance and visible to the robot).
-	\item \textbf{Obstacle}: There will be a random object on the ground, in the robot's path. The object will be the same for all teams.
+
+	\item \textbf{People}:
+	\begin{itemize}[nosep]
+		\item The operator is standing in front of the robot.
+		\item Three to four additional people are used to simulate a crowd and later form a queue.
+	\end{itemize}
+	
+	\item \textbf{Objects}: 
+		\begin{itemize}[nosep]
+			\item At least two bags are placed near the car location.
+			\item A small object on the ground.
+			\item A hard-to-see object.
+			\item Retractable barriers.
+		\end{itemize}
+	
+	\item \textbf{Uncontrolled environment:} There are no restrictions on other people walking by, standing near, or observing the robot throughout the test.
 \end{itemize}
 
 \subsection*{Procedure}
 \begin{enumerate}[nosep]
-	\item \textbf{Picking up the bag:} The robot picks up the bag pointed at by the operator, or asks them to handle it to the robot. If the robot picks up the wrong bag and delivers it, it won't score at any stage.
-	\item \textbf{Following the operator:} The robot should inform the operator when it is ready to follow them. The operator walks naturally towards the car; after reaching the car, the operator takes the bag back and thanks the robot.
-	\item \textbf{Obstacles:} The robot will face 2 obstacles along its way (in arbitrary order):
+	\item \textbf{Following the operator:} The robot should inform the operator when it is ready to follow them. The operator walks naturally towards the designated car location. Upon arrival, the operator points to one of the bags.
+
+	\item \textbf{Obstacles:} The robot encounters the following obstacles along its way (in arbitrary order):
 	\begin{enumerate*}[label=(\alph*)]
-	    \item an object on the ground,
-% 		\item a small object on the ground,
-% 		\item a hard-to-see object,
-		\item a crowd of people obstructing the path outside.
-% 		\item a small area blocked using retractable barriers.
+		\item a small object on the ground,
+		\item a hard-to-see object,
+		\item a crowd of people obstructing the path, and
+		\item a small area blocked using retractable barriers.
 	\end{enumerate*}
-	
-	\item \textbf{Re-entering the arena}: The robot returns to the arena, going back in through the entrance.
+	\item \textbf{Picking up the bag:} The robot must identify and pick up the bag pointed at by the operator.
+	\item \textbf{Bag delivery:} The robot takes the bag to the starting location. It may place the bag on the floor.
 
-% This part is related to a bonus
-% 	\item \textbf{Optional goals:}
-% 	\begin{enumerate}
-% 			\item \textbf{Re-entering the arena}: The robot returns to the arena, going back in through the entrance.
-
-% 			\item \textbf{Following the queue:} After the robot has reached the car, a few of the people that formed the crowd obstructing the robot return to the arena in a queue. The robot can decide to join the queue on its way back to the arena, in a manner that appears natural to the people in the queue.
-% 	\end{enumerate}
-
+	\item \textbf{Optional goals:}
+	\begin{enumerate}
+			\item \textbf{Following the queue:} After reaching the car, a few of the people that formed the crowd obstructing the robot return to the starting location in a queue. The robot can decide to join the queue on its way back, in a manner that appears natural to the people in the queue.
+	\end{enumerate}
 
 \end{enumerate}
 
@@ -67,28 +64,18 @@ This task focuses on \textit{person tracking}, \emph{navigation in unmapped envi
 \subsection*{Additional Rules and Remarks}
 \begin{enumerate}[nosep]
 
-	\item \textbf{Picking up the bag:} The robot must pick up the bag using gesture detection resources.
-    \item \textbf{Not picking up the correct bag:} This results in task failed and 0 points total earned.
-    \item \textbf{Finding the operator:} The robot can ask for the operator to go through a calibration procedure. The operator will stop walking if the robot starts giving instructions. This can be done at any time along the way and means a penalty. After 30 seconds a new penalty may be applied if the robot continues to give instructions. The robot cannot give instructions that make the operator leave the place he stopped. The operator will only return to follow the path when the robot reports that it has found the operator.
-    \item \textbf{Dropping the bags:} Dropping a bag causes a penalty. The robot can pick it up again or ask for the operator to pick it up for him.
-	\item \textbf{Car location:} There is no real car outside; instead, a fixed location outside the \Arena{} is designated as a car location.
+	\item \textbf{Car location:} A fixed location outside the arena is designated as the “car” area. No actual car is required.
+
 	\item \textbf{Reaching the car:} The robot can reach the car location only by following the operator (the location is unknown before the test).
-	\item \textbf{Deus ex Machina:} Score reductions for human assistance are applied in case the robot loses the operator, and needs to perform some action to find them again. %through:
-    % \begin{enumerate}
-    %  \item Natural interaction (e.g., waving and calling)
-    %  \item Unnatural interaction (e.g., raising both hands and jumping)
-    %  \item Touching the robot (e.g., pulling the robot's hand)
-    % \end{enumerate}
-	%\begin{table}[h]
-    %    \begin{tabular}{m{0.8\linewidth} c}
-	%		\textbf{Action} & \textbf{Reduction} \\\hline
-	%		Handing over the bag to the robot & 100pts \\
-	%		Finding the operator while following them: & \\
-	%		\hspace{0.5cm}- Natural interaction (e.g. waving and calling) & 100pts \\
-	%		\hspace{0.5cm}- Non-natural interaction (e.g. raising both hands and jumping) & 200pts \\
-	%		\hspace{0.5cm}- Touching the robot (e.g. pulling the robot's hand) & 400pts \\\hline
-	%	\end{tabular}
-	%\end{table}
+
+	\item \textbf{Deus ex Machina:} Penalties apply if the robot loses the operator and needs help recovering. The following forms of assistance are penalized:
+    \begin{enumerate}
+     \item Natural interaction (e.g., waving and calling)
+     \item Unnatural interaction (e.g., raising both hands and jumping)
+	 \item Returning in front of the robot to resume following.
+     \item Physical contact (e.g., pulling the robot's hand)
+    \end{enumerate}
+	Penalties are only applied if the robot continues to score after the interaction. Penalties can be applied multiple times up to a total of 250 points.
 \end{enumerate}
 
 
@@ -96,64 +83,64 @@ This task focuses on \textit{person tracking}, \emph{navigation in unmapped envi
 
 The referees need to:
 \begin{itemize}[nosep]
-	\item Select one volunteer to act as the operator.
-% 	\item Select three to four people to obstruct the robot's path outside and form the queue on the way back to the arena.
-    \item Select three to four people to obstruct the robot's path outside.
+	\item Assign one volunteer as the operator.
+	\item Assign three to four people to obstruct the robot's path and later form a queue.
 	\item Choose positions for the bags and assign a bag to the operator.
-% 	\item Choose the order of the obstacles that the robot will face outside while following the operator.
-    \item Insert the obstacle somewhere in the path.
+	\item Choose the order of the obstacles that the robot will face outside while following the operator.
 	\item Designate a location outside as a car location.
-% 	\item Designate a location for the queue to form returning into the arena. The queue is composed of the same people that form the crowd.
-	\item Mind the robot when it goes outside the \Arena{}.
+	\item Designate a location for the queue to form. The queue is composed of the same people that form the crowd.
+	\item Mind the robot when it moves around.
+	\item Ensure the operator follows the robot's instructions, steps over small obstacles, and walks naturally around objects.
 \end{itemize}
 
 \subsection*{OC Instructions}
 
-2h before test:
+At least two hours before test:
 \begin{itemize}[nosep]
 	\item Select and announce the robot's starting point.
-	\item Draw the object to obstruct the robot's path.
 	\item Select which bags will be used in the test.
-	\item Select 5 volunteers. 
+	\item Organize retractable barriers.
 \end{itemize}
 
 \subsection*{Score Sheet}
 
-The maximum time for this test is 5 minutes.
-
-\begin{scorelist}
+\begin{scorelist}[timelimit=5]
 	\scoreheading{Main Goal}
-% 	\scoreitem{100}{Picking up the correct bag}
-    \scoreitem[2]{350}{Picking up each of the bags without human assistance}
-	\scoreitem{600}{Following the person to the car}
-    \scoreitem{200}{Avoiding the object on the ground}
-    \scoreitem{300}{Avoiding the crowd of people obstructing the path}
-% 	\scoreitem{50}{Avoiding the small object on the ground}
-    \scoreitem{100}{Leaving the arena}
-    \scoreitem{100}{Re-entering the arena}
-% 	\scoreitem{50}{Avoiding the hard-to-see object}
-% 	\scoreitem{50}{Avoiding the area blocked with retractable barriers}
+	\scoreitem{300}{Following the person to the car}
+	\scoreitem{15}{Perceiving the correct beg (visualize on screen or say which one)}
+	\scoreitem{100}{Picking up the correct bag}
+    \scoreitem{50}{Avoiding the crowd of people obstructing the path}
+	\scoreitem{50}{Avoiding the small object on the ground}
+	\scoreitem{50}{Avoiding the hard-to-see object}
+	\scoreitem{50}{Avoiding the area blocked with retractable barriers}
 	
 	\scoreheading{Bonus rewards}
-	\scoreitem{100}{Picking up both bags at once}
+	\scoreitem{200}{Re-reaching the starting location}
+	\scoreitem{300}{Joining and staying in the queue on the way to the arena}
 
-% 	\scoreheading{Regular Penalties}
-% 	\scoreitem{50}{Dropping the bag}
-	\scoreheading{Regular Penalties}
-	\penaltyitem{100}{Dropping the bag and picking it up by itself}
-	\penaltyitem{200}{Dropping the bag and asking the operator to pick it up}
-	\penaltyitem{200}{Rediscovering the operator}
-% 	\scoreheading{Deus Ex Machina Penalties}
-% 	\penaltyitem{50}{Rediscovering the operator by natural interaction}
-% 	\penaltyitem{100}{Rediscovering the operator by unnatural interaction}
-% 	\penaltyitem{200}{Rediscovering the operator by direct contact}
-
-
-
+	\scoreheading{Penalties}
+	\penaltyitem{50}{Dropping the bag}
+	
+	\scoreheading{Deus Ex Machina Penalties}
+	\penaltyitem{50}{Rediscovering the operator by natural interaction}
+	\penaltyitem{100}{Rediscovering the operator by unnatural interaction}
+	\penaltyitem{150}{Rediscovering the operator by asking them to come back}
+	\penaltyitem{200}{Rediscovering the operator by direct contact}
 
 	% No longer necessary, computes automatically
 	% \setTotalScore{1000}
 \end{scorelist}
+
+
+
+
+
+
+
+
+
+
+
 
 
 \clearpage
