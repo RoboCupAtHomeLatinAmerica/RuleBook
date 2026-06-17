@@ -14,19 +14,19 @@ jobs:
     steps:
       - uses: actions/checkout@v5
 
-      - name: compile
+      - name: Compile
         run: make all
 
       - name: Upload Rulebook
         if: always()
         uses: actions/upload-artifact@v7
         with:
-          name: build
+          name: Rulebook
           path: build/Rulebook.pdf
 
       - name: Upload Local_chair_instructions
         if: always()
         uses: actions/upload-artifact@v7
         with:
-          name: build
+          name: instructions
           path: build/Local_chair_instructions.pdf
