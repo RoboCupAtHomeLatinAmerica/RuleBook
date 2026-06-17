@@ -51,38 +51,37 @@
 
 \input{chapters/Setup}
 
-%%% STAGE I
+%%% STAGE A
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Tests in Stage I}
-\label{chap:stage_I}
+\chapter{Tests for sub-league A}
+\label{chap:stage_A}
+
+\testtocentry{test:clean-up}
+\testtocentry{test:gpsr}
+\clearpage
+
+\input{tasks/LARC_CleanUp}
+\input{tasks/LARC_GPSR}
+
+%%% STAGE B
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Tests for sub-league B}
+\label{chap:stage_B}
+
 \testtocentry{test:speech-recognition-audio-detection}
 \testtocentry{test:personal-recognition}
 \testtocentry{test:navigation-and-follow-me}
 \testtocentry{test:object-recognition-and-manupulation}
-\clearpage
+\clearpage                   
 
 \input{tasks/LARC_Speech}
 \input{tasks/LARC_People}
 \input{tasks/LARC_navigation}
 \input{tasks/LARC_Object}
 
-%%% STAGE II
+%%% STAGE Restaurant
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Tests in Stage II}
-\label{chap:stage_II}
-\testtocentry{test:carry-my-luggage}
-\testtocentry{test:clean-up}
-\testtocentry{test:gpsr}
-\testtocentry{test:restaurant}
-\clearpage
-
-\input{tasks/LARC_CarryMyLuggage}
-\input{tasks/LARC_CleanUp}
-% \input{tasks/LARC_Receptionist}
-% \input{tasks/LARC_Take Out the Garbage}
-% \input{tasks/LARC_CleanTheTable}
-% \input{tasks/LARC_WhereIsThis}
-\input{tasks/LARC_GPSR}
+\chapter{Tests outside the arena}
 \input{tasks/LARC_Restaurant}
 
 %% FINALS
