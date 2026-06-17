@@ -1,0 +1,25 @@
+name: Build LaTeX
+
+on:
+  push:
+  pull_request:
+  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    container:
+      image: ghcr.io/xu-cheng/texlive-full:latest
+      
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: compile
+        run: make all
+
+      - name: Upload build
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: build
+          path: build/*.pdf
