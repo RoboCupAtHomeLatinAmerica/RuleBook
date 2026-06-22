@@ -46,11 +46,11 @@
         \vspace*{.27cm}
         \Huge{RoboCup Brazil Open}\\[1.23ex]
         \Huge{RoboCup@Home}\\[1.23ex]
-        \Large Instuctions for Local Chair 2023\\[2ex]
+        \Large Instruções para o LOC\\[2ex]
       }
       \hrulefill\par
       \vfill
-      ~~ Last Build Date: \today \quad 
+      ~~ Última Atualização: \today \quad 
       \vfill
     \end{center}
   \end{titlepage}
@@ -73,100 +73,205 @@
 
 % \renewcommand{\chapter}{Lecture}
 
+\section{Membros do Comitê Organizador (OC)}
+\input{Committees.tex}
 
-\section{arena}
+\section{Arena}
 
-Do not use the same arena configuration for more than two consecutive years.
+A arena@Home é um ambiente residencial realista (um apartamento ou casa) que consiste em cômodos interconectados. 
+A planta da arena deve mudar a cada dois anos.
+
+\begin{itemize}
+    \item Quantidade minima de arenas:1 
+    \item Tamanho interno mínimo da arena: 80 $m^2$.
+    \item A arena deve ter cerca de um metro de espaço livre e uniforme ao redor das paredes externas para circulação.
+    \item Deve haver uma mesa do lado de fora da arena para dispositivos de computação externos usados pela equipe que está atualmente executando a tarefa dentro da arena.
+    \item Deve haver um ponto de energia em cada cômodo da arena.
+\end{itemize}
+
+\begin{minipage}{0.5\textwidth}
+	\begin{figure}[H]
+		\begin{center}
+			\includegraphics[height=0.6\textwidth]{images/arena_2d.jpeg}
+            \caption{Arena 2D}
+			\label{fig:arena2d}
+		\end{center}
+	\end{figure}
+\end{minipage}
+\end{minipage}
+
+\begin{minipage}{0.5\textwidth}
+	\begin{figure}[H]
+		\begin{center}
+			\includegraphics[height=0.6\textwidth]{images/arena_3d_a.jpeg}
+            \caption{Arena 3D - Perspective A}
+			\label{fig:arena3d-a}
+		\end{center}
+	\end{figure}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+	\begin{figure}[H]
+		\begin{center}
+			\includegraphics[height=0.6\textwidth]{images/arena_3d_b.jpeg}
+            \caption{Arena 3D - Perspective B}
+			\label{fig:arena3d-b}
+		\end{center}
+	\end{figure}
+\end{minipage}
 
 
+\subsection{Paredes} 
 
-\begin{tabular}{ p{0.3\linewidth} p{0.01\linewidth} p{0.6\linewidth}}
-    \textbf{area}                 & : & Between $80m^2$ and $100m^2$. \\
-    \textbf{style}                & : & Country standard. \\
-    \textbf{decoration}           & : & According to the customs of the country. \\
-    \textbf{minimum Composition}  & : & Living room, office, bedroom and kitchen.
-\end{tabular}
+\begin{itemize}
+    \item As paredes podem ser feitas com Octanorms - Sistema de montagem modular que utiliza perfis de alumínio octogonais.
+    \item As paredes são fixas e não podem ser movidas durante a competição.
+    \item As paredes podem conter posters, imagens ou quadros.
+    \item A parede voltada para as mesas das equipes possuem a mesma altura das portas.
+    \item As demais paredes devem ter 1m de altura com dois tipos de material.
+    \item A parte de baixo (50cm) deve ser de material fosco, permitindo que o robô detecte a parede usando um sensor laser .
+    \item A parte de cima (50cm) deve ser de material transparente, permitindo que o público veja dentro da arena
+\end{itemize}
+
+\subsection{Piso}
+
+\begin{itemize}
+    \item O piso deve ser plano e firme.
+    \item O piso não deve ter degraus ou escadas significativas. Pequenas irregularidades, como carpetes, transições no revestimento do piso entre diferentes áreas e pequenas lacunas (especialmente nas portas) podem ser esperadas. 
+    \item O piso não deve ser escorregadio.
+\end{itemize}   
+
+\subsection{Portas}
+
+\begin{itemize}
+    \item As portas de entrada e saída ficam na parede voltada para as mesas das equipes.
+    \item A porta de entrada abre para o interior da arena.
+    \item A porta de saída abre para o exterior da arena. 
+    \item Essas duas portas não podem estar no mesmo cômodo.
+    \item Dentro da Arena, os cômodos são conectados por aberturas de portas e/ou portas internas. 
+    \item Todas as portas têm maçanetas (não podem ser redondas), e podem ser fechadas a qualquer momento.
+\end{itemize}
+
+\begin{minipage}{0.5\textwidth}
+	\begin{figure}[H]
+		\begin{center}
+			\includegraphics[height=0.6\textwidth]{images/arena_3d_a.jpeg}
+            \caption{Arena 3D - Perspective A}
+			\label{fig:arena3d-a}
+		\end{center}
+	\end{figure}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+	\begin{figure}[H]
+		\begin{center}
+			\includegraphics[height=0.6\textwidth]{images/arena_3d_b.jpeg}
+            \caption{Arena 3D - Perspective B}
+			\label{fig:arena3d-b}
+		\end{center}
+	\end{figure}
+\end{minipage}
 
 
-\subsection{walls}
+\subsection{Móveis e Decoração}
 
-\begin{tabular}{ p{0.3\linewidth} p{0.01\linewidth} p{0.6\linewidth}}
-    \textbf{Minimum height}       & : & 60 cm \\
-    \textbf{Maximum height}       & : & It should not disrupt the public's view. \\
-    \textbf{Decoration}           & : & The walls may contain poster or pictures. 
-\end{tabular}
+A arena é organizada e decorada para se assemelhar a um apartamento típico do local anfitrião, incluindo todas as necessidades e decorações que se pode esperar encontrar em uma casa normal. As decorações podem incluir, mas não estão limitadas a, plantas, espelhos, pinturas, pôsteres, pratos, porta-retratos, relógios de parede, velas com suportes, livros, etc.
 
-\subsection{Floor}
-
-\begin{tabular}{ p{0.3\linewidth} p{0.01\linewidth} p{0.6\linewidth}}
-    \textbf{Type}                 & : & With some grip to prevent robots from shaking. \\
-    \textbf{Color/texture}        & : & Same color or texture of the wall \\
-    \textbf{Steps}                & : & There should be no steps. \\
-    \textbf{Carpet}               & : & There should be no carpet. 
-\end{tabular}
-
-\subsection{Doors}
-
-\begin{tabular}{ p{0.3\linewidth} p{0.01\linewidth} p{0.6\linewidth}}
-    \textbf{Amount}           & : & At least two doors. Entry and exit of the arena. The entrance door should open to inside the houve, as the output door should open to outside the house. \\
-    \textbf{Knobs}            & : & The door handles should be rectangular preferably. Do not use round door handles. 
-\end{tabular}
-
-\subsection{Furniture}
-
-\begin{tabular}{ p{0.3\linewidth} p{0.01\linewidth} p{0.6\linewidth}}
-    \textbf{Type}       & : & Typical of the country. \\
-\end{tabular}
-
+Cozinha: 
 \begin{description}
-    \item [1] small dining table with two to four chairs.
-    \item [1] sofa with two or three places.
-    \item [2] chairs or armchairs.
-    \item [1] Television hack.
-    \item [1] television with remote control.
-    \item [1] bookshelf (with some books inside).
-    \item [1] a refrigerator (should not be less than 120 cm).
-    \item [2] plant glass.
-    \item [1] dishwasher.
-    \item [1] bed.
-    \item [1] Office table with chair.
-    \item [2] trash bins with 20 cm (minimum) diameter at the opening. They must have removable lids with rigid straps.
+    \item [1] relógio na parede
+    \item [1] mesa pequena de jantar com duas cadeiras
+    \item [1] pano de mesa
+    \item [1] lixeira
+    \item [1] máquina de lavar louça
+    \item [1] micro-ondas
+    \item [1] pia
+    \item [1] geladeira
+    \item [1] despensa (pode ser octanorm)
+    \item [1] estante alta com 5 prateleiras - distância entre as prateleiras deve ser de 30cm. A estante deve ter 1 ou 2 portas com puxador U (ver figuras).
 \end{description}
 
-\section{Arena objects}
-
-\subsection{Table utensils}
+Lavanderia:
 \begin{description}
-    \item [1] Set of dishes (minimum 3 items).
-    \item [1] Set of bowls (minimum 3 items).
-    \item [1] Set of cups (minimo 3 items).
-    \item [1] Napkin package.
-    \item [1] Set of cutlery (fork, knife and spoon).
-    \item [10] plastic trash bags (medium size).
-    \item [4] Shopping bags: Light and with rigid straps.
-    \item [2] trays: tray or basket, intended for handling with both hands.
-    \item [1] Object that I can put liquid (for example, jar).
-    \item [1] heavy object: weight between 1.0kg and 1.5kg (for example, water bottle).
-    \item [1] Tiny object: light, not larger than 5 $cm^3$ (for example, tea bag).
-    \item [1] Fragile object: easy to break (for example, egg).
-    \item [1] A deformable object: flexible that can appear in different forms (for example, cloth).
+    \item [1] máquina de lavar roupa
+    \item [1] mesa de passar roupa
+    \item [1] ferro de passar roupa
+    \item [1] cesto de roupa suja
+    \item [-] algumas roupas
 \end{description}
 
-\subsection{Objects for recognition and manipulation}
+Sala de estar:
+\begin{description}
+    \item [1] sofá
+    \item [1] poltrona
+    \item [1] mesa pequena
+    \item [1] rack para TV
+    \item [1] televisão com controle remoto
+    \item [1] estante de livros
+    \item [1] cabideiro
+    \item [2] tapetes
+    \item [2] vasos de plantas de chão (com plantas)
+    \item [1] vaso de planta de mesa (com plantas)
+    \item [1 ou 2] quadros na parede
+\end{description}
 
-The objects are presented to competitors with kits.
+Quarto:
+\begin{description}
+    \item [1] cama de casal ou solteiro(pode ser octanorm)
+    \item [2] mesas de cabeceira (pode ser octanorm)
+    \item [1] roupa de cama
+    \item [1] lixeira
+\end{description}
 
+Varanda:
+\begin{description}
+    \item [2] poltronas
+    \item [1] mesa baixa de centro 
+    \item [1] vaso de plantas de chão (com plantas)
+    \item [1] lixeira
+\end{description}
+
+Escritório:
+\begin{description}
+    \item [1] mesa de escritório
+    \item [1] cadeira de escritório 
+    \item [1] vaso de plantas de chão (com plantas)
+    \item [1] estante de livros
+\end{description}
+
+\section{Objetos da arena e kits das tarefas}
+A configuração mínima de objetos necessários para as tarefas na arena consiste em:
+
+O LOC deve acompanhar o CHAIR em um mercado local para comprar esses objetos no primeiro dia do evento.
+Essa compra envolve kits com diversos objetos necessários para a realização da competição.
+O custo dessa compra gira em torno de R\$500,00.
+
+
+Objetos da arena:
+\begin{description}
+    \item [Utensílios de mesa:] Prato, tigela, xícara (ou caneca) e guardanapo
+    \item [Talheres:] Garfo, faca e colher.
+    \item [Sacos de lixo:] Grandes sacos de lixo de plástico..
+    \item [Sacolas de mercado:] Leves e com alças rígidas e verticais
+    \item [Bandejas:] Um objeto de transporte, como uma bandeja ou cesta, destinado à manipulação bimanual
+    \item [Despejável:] Um objeto cujo conteúdo pode ser despejado (como uma caixa de cereal).
+    \item [Objeto manipulável pesado:] Peso entre 1,0 kg e 1,5 kg.
+    \item [Objeto manipulável pequeno:] Um objeto leve que não é maior que 5 cm (como papel, um saquinho de chá ou uma caneta).
+    \item [Objeto frágil:] Um objeto fácil de quebrar (como um ovo de chocolate).
+    \item [Objeto deformável:] Um objeto flexível que pode assumir diferentes formas (como um pano).
+\end{description}
+
+
+Objetos das tarefas:
 \begin{tabular}{ p{0.3\linewidth} p{0.01\linewidth} p{0.6\linewidth}}
-    \textbf{Manipulation}       & : & All objects must be parasible to manipulate with only one hand and weigh a maximum of 1.5kg. \\
-    \textbf{Amount}             & : & The number of kits is defined by the number of participating teams. 1 kit for the arena and 1 kit for every 3 participating teams. \\
-    \textbf{Definition}         & : & The items are defined during the competition (Warm Up). \\
-    \textbf{Items}              & : & Kits should be between 15 and 20 items. The number of items should be balanced between categories. They may contain, for example, the following elements: 
+    \textbf{Manipulation}       & : & Todos os objetos devem ser manipuláveis com apenas uma mão e pesar no máximo 1.5kg. \\
+    \textbf{Amount}             & : & O número de kits é definido pelo número de equipes participantes. 1 kit para a arena e 1 kit para cada 3 equipes participantes. \\
+    \textbf{Definition}         & : & Os itens são definidos durante a competição (Warm Up). \\
+    \textbf{Items}              & : & Os kits devem conter entre 15 e 20 itens. O número de itens deve ser balanceado entre as categorias. Podem conter, por exemplo, os seguintes elementos: 
 \end{tabular}
 
 \resizebox{\textwidth}{!}{
     \begin{tabular}{|c|c|c|c|c|c|}
         \hline
-        Drinks & Cleaning supplies & Pantry items & Fruits & Snacks & Cutlery\\
+        Bebidas & Itens de limpeza & Itens de despensa & Frutas & Petiscos & Talheres\\
         \hline
         Coconut Water   & Cleaner       & Corn Flakes    & Apple     & Cookie     & Spoon \\
         Coke            & Cloth         & English Sauce	 & Banana    & Pringles   & Fork\\
@@ -178,19 +283,26 @@ The objects are presented to competitors with kits.
     \end{tabular}
 }
 
-NOTE: A representative of the local organization must accompany the category coordinator to a local supermarket to overcome the items.
-
-\section{Other materials}
-
+Other materials:
 \begin{description}
-    \item [1] Stopwatch.
-    \item [$n$${}^\star$] Poster supports.
-    \item [1] Sound system with at least one lapel to connect to the robot.
-    \item [1] Monitor for score presentation and information to the public.
-    \item [1] Exclusive arena wifi network with internet connection.
+    \item [1] Cronômetro.
+    \item [$n$${}^\star$] Suporte para poster.
+    \item [1] Sistema de som com pelo menos um microfone para conectar ao robô.
+    \item [1] Monitor para apresentação de pontuação e informações ao público.
+    \item [1] Rede wifi exclusiva da arena com conexão à internet.
 \end{description}
-${}^\star$ $n$ is the number of teams in the competition.
+${}^\star$ $n$ é o número de equipes na competição.
 
+\section{Equipamentos}
+\begin{description}
+    \item [1] pontos de acesso WLAN exclusivo para a arena
+    \item [1] conjunto de mesas com pelo menos 4 lugares para os OCs/TCs. As mesas precisam ter acesso a tomadas elétricas e conexão LAN.
+\end{description}
+    
+\section{Área das equipes}
+Cada equipe deve ter pelo menos uma mesa para cada quatro membros com o número correspondente de cadeiras. O número de membros da equipe varia muito por equipe, de 2 a 20 membros. Cada equipe deve ter acesso a uma tomada elétrica e uma conexão Ethernet na área da equipe.
+
+A liga contém robôs reais. Cada equipe precisará de cerca de 2 m² para armazenar a caixa/estojo do robô e outros 1-2 m² para manter o robô perto da área da mesa do robô. Recomendamos 4-5 m² perto da área designada da equipe para manusear o robô. Também recomendamos algum espaço adicional entre as fileiras de mesas para o acesso das equipes às arenas com o robô (pois deve haver espaço suficiente para as equipes carregarem o robô e passarem).
 
 
 \end{document}
